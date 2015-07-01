@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .pure-g
+    .pure-u-1-5
+    form.pure-form.pure-u-3-5(action='/save_new_item', method='post')
+      fieldset
+        .pure-g
+          .pure-u-19-24
+            input#subject.pure-u-1(type='text', placeholder='Subject', name='subject', value=subject, required)
+          .pure-u-1-24
+          .pure-u-4-24
+            input#date.pure-u-1(type='text', placeholder='Date (YYYY-MM-DD)', name='date', value=date, required, pattern='[0-9]{4}\-[0-9]{2}\-[0-9]{2}')
+        .pure-g
+          p
+        .pure-g
+          textarea#content.pure-u-1(placeholder='Type...', rows='20', name='content', required)= content
+        .pure-g
+          p
+        .pure-g
+          .pure-u-10-24
+          .pure-u-4-24
+            .pure-g
+              button.pure-u-10-24.pure-button.pure-button-primary(type='submit') Save
+              .pure-u-4-24
+              button.pure-u-10-24.pure-button Cancel 
+          .pure-u-10-24
+    .pure-u-1-5
+      
